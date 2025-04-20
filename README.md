@@ -23,4 +23,4 @@
 
 ## Instalacja
 
-Aby rozpocząć pracę z aplikacją CodeQuest, pobierz i zainstaluj aplikację z sekcji [Releases](https://github.com/mOnteySZEF/codequest/releases).
+Aby rozpocząć pracę z aplikacją CodeQuest, pobierz i zainstaluj aplikację z sekcji [Releases](https://github.com/mOnteySZEF/Code-Quest/releases).
