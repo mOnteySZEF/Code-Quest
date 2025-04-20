@@ -2,7 +2,7 @@
 
 ![Logo CodeQuest](assets/icon.ico)
 
-**Version**: 1.0.0
+**Version**: 1.0.1
 
 **Author**: [mOntey](https://github.com/mOnteySZEF)
 
