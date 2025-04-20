@@ -1,6 +1,6 @@
 {
   "name": "codequest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CodeQuest – edukacyjna gra do nauki programowania [School Project]",
   "author": "mOntey",
   "license": "MIT",
@@ -25,11 +25,12 @@
       "!*.md"
     ],
     "extraMetadata": {
-      "version": "1.0.0"
+      "version": "1.0.1"
     },
     "win": {
       "target": [
-        "nsis", "portable"
+        "nsis",
+        "portable"
       ],
       "icon": "assets/icon.png"
     },
@@ -40,11 +41,17 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "CodeQuest"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "mOnteySZEF",
+      "repo": "Code-Quest"
     }
   },
   "devDependencies": {
     "electron": "^35.2.0",
     "electron-builder": "^26.0.12",
-    "electron-packager": "^17.1.2"
+    "electron-packager": "^17.1.2",
+    "electron-updater": "^4.5.7"
   }
 }

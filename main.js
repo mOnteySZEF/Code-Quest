@@ -1,5 +1,10 @@
-const { app, BrowserWindow, nativeTheme } = require('electron');
+const { app, BrowserWindow, nativeTheme, autoUpdater } = require('electron');
 const path = require('path');
+
+const server = 'https://update.electronjs.org';
+const feedURL = `${server}/mOnteySZEF/Code-Quest/${process.platform}-${process.arch}`;
+
+autoUpdater.setFeedURL({ url: feedURL });
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -34,6 +39,33 @@ function createWindow() {
 
   win.once('ready-to-show', () => {
     win.show();
+  });
+
+  autoUpdater.checkForUpdatesAndNotify();
+
+  autoUpdater.on('checking-for-update', () => {
+    console.log('Sprawdzanie dostępności aktualizacji...');
+  });
+
+  autoUpdater.on('update-available', () => {
+    console.log('Aktualizacja dostępna!');
+  });
+
+  autoUpdater.on('update-not-available', () => {
+    console.log('Brak dostępnych aktualizacji.');
+  });
+
+  autoUpdater.on('error', (err) => {
+    console.error('Błąd podczas sprawdzania aktualizacji:', err);
+  });
+
+  autoUpdater.on('download-progress', (progressObj) => {
+    console.log(`Postęp pobierania: ${progressObj.percent}%`);
+  });
+
+  autoUpdater.on('update-downloaded', () => {
+    console.log('Aktualizacja pobrana, aplikacja zostanie ponownie uruchomiona.');
+    autoUpdater.quitAndInstall();
   });
 }
 
