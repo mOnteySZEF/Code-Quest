@@ -1,0 +1,117 @@
+#hud {
+    display: flex;
+    justify-content: space-between;
+    color: #ecf0f1;
+    margin-bottom: 1rem;
+}
+
+.hud-prefix, .hud-main-text {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 8px; 
+    background-color: #2c2c2c; 
+    margin-top: 1.6rem; 
+}
+
+#progressBarFull {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #007bff, #0056b3); 
+    border-radius: 8px;
+}
+
+#loader {
+    border: 1.6rem solid #ecf0f1;
+    border-radius: 50%;
+    border-top: 1.6rem solid #007bff;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.editor-wrapper {
+    display: flex;
+    background-color: #2c2c2c;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .line-numbers {
+    background-color: #1e1e1e;
+    color: #888;
+    padding: 10px;
+    text-align: right;
+    user-select: none;
+    width: 40px;
+    overflow: hidden;
+  }
+  
+  .code-editor {
+    flex: 1;
+    padding: 10px;
+    color: #fff;
+    outline: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  .devtools {
+    background-color: #1e1e1e;
+    color: #00ff88;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    height: 150px;
+    overflow-y: auto;
+  }
+  
+  .devtools-header {
+    color: #ccc;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#hint {
+    margin-top: 20px;
+}
+
+#hint p {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.button-container button {
+    margin: 5px;
+}

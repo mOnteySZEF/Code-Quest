@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Code Quest</title>
+</head>
+<body>
+    <div class="container">
+        <div id="home" class="flex-center flex-column">
+            <img src="https://i.imgur.com/GbsH7Je.png" alt="Logo Code Quest" class="logo">
+            <h1>Code Quest</h1>
+            <br>
+            <a class="btn" href="./game.html"><i class="fas fa-question-circle"></i> QUIZ</a>
+            <a class="btn" href="./game2.html"><i class="fas fa-code"></i> NAPRAWA KODU</a>
+            <br>
+            <button class="btn" id="info-button"><i class="fas fa-info-circle"></i> INFORMACJE</button>
+            <button class="btn" id="sources-button"><i class="fas fa-book"></i> ŹRÓDŁA</button>
+            <a class="btn" id="exit" href="#"><i class="fas fa-sign-out-alt"></i> WYJŚCIE</a>
+        </div>
+
+        <div id="info-panel" class="info-panel hidden" style="max-height: 100vh; overflow-y: auto; max-width: 150%; padding: 30px; border-radius: 8px; background-color: #2c2c2c;">
+            <h2 style="margin-bottom: 15px;">Informacje o pytaniach i odpowiedziach</h2>
+            <ul>
+                <p>
+                    <strong>Jakiego znaku używamy do tworzenia komentarzy jednolinijkowych w JavaScript?</strong><br>
+                    W JavaScript, do tworzenia komentarzy jednolinijkowych używamy znaku „//”. Taki komentarz jest ignorowany przez interpreter i jest wykorzystywany do wstawiania uwag w kodzie, co może być przydatne do wyjaśnienia fragmentów kodu lub pisania notatek.
+                </p>
+                <p>
+                    <strong>Który z poniższych typów danych nie jest typem prostym w JavaScript?</strong><br>
+                    W JavaScript typem danych, który nie jest typem prostym, jest "Object" (obiekt). Typy proste obejmują liczby, napisy i wartości logiczne (Boolean), które są niepodzielne. Obiekty mogą przechowywać kolekcje i bardziej złożone jednostki danych.
+                </p>
+                <p>
+                    <strong>Jakim wynikiem jest wyrażenie 5 + '5' w JavaScript?</strong><br>
+                    Wyrażenie `5 + '5'` zwróci '55'. W JavaScript dochodzi do konwersji typów, gdzie liczba zostaje przekształcona na string i sklejona z innym stringiem, co skutkuje osiągnięciem wyniku w postaci tekstowej.
+                </p>
+                <p>
+                    <strong>Jak stworzyć tablicę w JavaScript?</strong><br>
+                    W JavaScript tablicę można utworzyć na kilka sposobów, przy czym najpopularniejszymi są: `var array = [];` oraz `var array = new Array();`. Tablice służą do przechowywania wielozadaniowych struktur danych i pozwalają na dynamiczną manipulację elementami.
+                </p>
+                <p>
+                    <strong>Co zwraca metoda .push() w tablicach JavaScript?</strong><br>
+                    Metoda `.push()` dodaje nowy element do końca tablicy i zwraca nową długość tablicy. To oznacza, że można ją wykorzystać do kontrolowania liczby elementów w tablicy po dodaniu nowych wartości.
+                </p>
+                <p>
+                    <strong>Jak nazywa się pętla, która działa dopóki warunek jest spełniony?</strong><br>
+                    Pętla nosząca nazwę "while" działa tak długo, jak długo spełniony jest dany warunek. Ta konstrukcja iteracyjna pozwala na wykonanie bloku kodu wielokrotnie, co jest przydatne w sytuacjach, gdy nie wiadomo z góry, ile powtórzeń będzie potrzebnych.
+                </p>
+                <p>
+                    <strong>Jak można sprawdzić, czy zmienna x jest liczbą w JavaScript?</strong><br>
+                    Aby sprawdzić, czy zmienna ma wartość liczbową, możemy użyć funkcji `isNaN(x)`, która zwraca prawdę, jeśli x nie jest liczbą. Alternatywnie można użyć `typeof x === 'number'`, aby potwierdzić typ zmiennej.
+                </p>
+                <p>
+                    <strong>Jaka metoda pozwala na transformację łańcucha tekstowego na litery wielkie?</strong><br>
+                    Metoda `.toUpperCase()` w JavaScript zmienia wszystkie litery w ciągu na wielkie. Jest to przydatne podczas manipulacji tekstem, aby zapewnić ujednolicony format.
+                </p>
+                <p>
+                    <strong>Jak utworzyć obiekt w JavaScript?</strong><br>
+                    Można utworzyć obiekt w JavaScript na kilka sposobów, w tym za pomocą literałów obiektowych, jak w `var obj = {}`, oraz przez inne funkcje, takie jak `var obj = new Object()`. Obiekty są kluczowymi strukturami danych w JavaScript, pozwalającymi na grupowanie danych i funkcji.
+                </p>
+                <p>
+                    <strong>Jakie słowo kluczowe używamy do definiowania funkcji w JavaScript?</strong><br>
+                    Funkcje w JavaScript definiuje się za pomocą słowa kluczowego `function`. Służy ono do tworzenia zorganizowanego i wielokrotnego użycia bloków kodu, co jest fundamentem programowania w JavaScript.
+                </p>
+                <p>
+                    <strong>Jak wywołać funkcję w JavaScript?</strong><br>
+                    Aby wywołać funkcję, wystarczy użyć jej nazwy, a następnie dodać nawiasy, np. `myFunction()`. To spowoduje wykonanie kodu zawartego wewnątrz funkcji.
+                </p>
+                <p>
+                    <strong>Co sprawia metoda .slice() w przypadku tablic?</strong><br>
+                    Metoda `.slice()` zwraca nową tablicę zawierającą kopię części oryginalnej tablicy, określonej przez dwa argumenty; początkowy i końcowy indeks (nie w tym miejscu). Dzięki temu możemy łatwo manipulować danymi w tablicach bez ich modyfikacji.
+                </p>
+                <p>
+                    <strong>Jaka jest różnica między == a === w JavaScript?</strong><br>
+                    Różnica polega na tym, że operator `===` porównuje zarówno wartość, jak i typ zmiennej, podczas gdy `==` porównuje tylko wartości, co może prowadzić do nieoczekiwanych wyników przez automatyczną konwersję typów.
+                </p>
+                <p>
+                    <strong>Jak można zatrzymać działanie skryptu JavaScript?</strong><br>
+                    Aby przerwać działanie skryptu, można użyć słowa kluczowego `break`, które wychodzi z pętli, lub `return`, który kończy funkcję. `exit()` jest używane w innych kontekstach i nie jest standardowym sposobem zatrzymywania skryptu w JavaScript.
+                </p>
+                <p>
+                    <strong>Jaką wartość zwróci operacja 'true' && 'false'?</strong><br>
+                    Operacja `true && false` zwróci `false`. Operator `&&` logicznie AND, zwraca `true` tylko wtedy, gdy oba warunki są prawdziwe.
+                </p>
+                <p>
+                    <strong>Jaki atrybut definiuje CSS dla tła elementu?</strong><br>
+                    Atrybut `background-color` w CSS definiuje kolor tła dla elementu. Możemy go stosować w stylach, aby dostosować wygląd naszego HTML.
+                </p>
+                <p>
+                    <strong>Jaką metodę należy użyć, aby usunąć ostatni element tablicy?</strong><br>
+                    Aby usunąć ostatni element z tablicy, używamy metody `.pop()`, która również zwraca usuniętą wartość. To bardzo użyteczne dla dynamicznych operacji na tablicach.
+                </p>
+                <p>
+                    <strong>Jakim wynikiem zadziała wyrażenie 10 % 3?</strong><br>
+                    Wyrażenie `10 % 3` zwróci `1`, ponieważ reszta z dzielenia 10 przez 3 wynosi 1. Operator `%` zwraca resztę z dzielenia.
+                </p>
+                <p>
+                    <strong>Jak w JavaScript odwołać się do elementu o id 'myElement'?</strong><br>
+                    Aby odwołać się do elementu o określonym id, używamy metody `document.getElementById('myElement')`, która zwraca element z DOM, co jest niezbędne do manipulacji lub pobierania informacji o tym elemencie.
+                </p>
+                <p>
+                    <strong>Jak zdefiniować stałą w JavaScript?</strong><br>
+                    Stałą definiujemy używając słowa kluczowego `const`, co oznacza, że zadeklarowana zmienna nie może być zmieniana po jej zainicjowaniu. Zapewnia to bezpieczeństwo i stabilność wartości używanych w aplikacji.
+                </p>
+                <p>
+                    <strong>Jak zainicjować obiekt za pomocą literału obiektowego?</strong><br>
+                    Używając literału obiektowego, możemy zainicjować obiekt w taki sposób: `var obj = { key: 'value' };`. Taka struktura pozwala na przechowywanie par klucz-wartość, co jest wyjątkowo użyteczne w programowaniu.
+                </p>
+                <p>
+                    <strong>Jak można przekształcić zmienną typu String na typ Number?</strong><br>
+                    W JavaScript istnieje kilka metod przekształcania stringów na liczby, w tym `parseInt()`, `Number()`, a także `parseFloat()` dla liczb zmiennoprzecinkowych. Umożliwia to łatwe operowanie na danych liczbowych po ich wejściu w formie tekstu.
+                </p>
+                <p>
+                    <strong>Jakie wartości można użyć w instrukcji switch?</strong><br>
+                    W instrukcji `switch` można używać dowolnego typu danych, w tym liczb, ciągów tekstowych, a nawet zmiennych. Jest to potężne narzędzie do porównywania wartości i określania, jaki blok kodu powinien być wykonany.
+                </p>
+                <p>
+                    <strong>Co będzie wynikiem wyrażenia 4 + '2' w JavaScript?</strong><br>
+                    Wyrażenie `4 + '2'` zwróci '42', ponieważ liczba `4` zostaje skonwertowana na string i następnie łączona z innym stringiem. Operator `+` wykonuje tutaj konkatencję, a nie dodawanie arytmetyczne.
+                </p>
+                <p>
+                    <strong>Kiedy używamy słowa kluczowego 'let'?</strong><br>
+                    Słowo kluczowe `let` używamy do deklarowania zmiennych lokalnych, które mogą być zmieniane w obrębie bloku kodu. `let` pozwala na bardziej elastyczne zarządzanie zasięgiem zmiennych w porównaniu do `var`.
+                </p>
+                <p>
+                    <strong>Jakie są typy zbiorów w JavaScript?</strong><br>
+                    W JavaScript mamy do czynienia z dwoma głównymi typami zbiorów: tablice i obiekty. Oba te typy strukturalne pozwalają na przechowywanie kolekcji danych, jednak różnią się one zasadniczo w sposobach indeksowania i przechowywania.
+                </p>
+            </ul>
+            <button class="btn btn-back" id="back-to-home-info">Cofnij</button>
+        </div>
+
+        <div id="sources-panel" class="info-panel hidden">
+            <h2>Źródła informacji</h2>
+            <ul>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a></p>
+                <p><a href="https://www.w3schools.com/js/" target="_blank">W3Schools - JavaScript Tutorial</a></p>
+                <p><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp - Kursy programowania</a></p>
+                <p><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Codecademy - Wprowadzenie do JavaScript</a></p>
+                <p><a href="https://javascript.info/" target="_blank">JavaScript.info - Nowoczesny JavaScript</a></p>
+            </ul>
+            <button style="width: 30%;" class="btn btn-back" id="back-to-home-sources">Cofnij</button>
+        </div>
+    </div>
+
+    <script>
+        const exitButton = document.getElementById("exit");
+        const infoButton = document.getElementById("info-button");
+        const sourcesButton = document.getElementById("sources-button");
+        const backToHomeInfoButton = document.getElementById("back-to-home-info");
+        const backToHomeSourcesButton = document.getElementById("back-to-home-sources");
+        const infoPanel = document.getElementById("info-panel");
+        const sourcesPanel = document.getElementById("sources-panel");
+
+        exitButton.addEventListener("click", () => window.close());
+
+        infoButton.addEventListener("click", () => {
+            document.getElementById("home").classList.add("hidden");
+            infoPanel.classList.remove("hidden");
+        });
+
+        sourcesButton.addEventListener("click", () => {
+            document.getElementById("home").classList.add("hidden");
+            sourcesPanel.classList.remove("hidden");
+        });
+
+        backToHomeInfoButton.addEventListener("click", () => {
+            infoPanel.classList.add("hidden");
+            document.getElementById("home").classList.remove("hidden");
+        });
+
+        backToHomeSourcesButton.addEventListener("click", () => {
+            sourcesPanel.classList.add("hidden");
+            document.getElementById("home").classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>

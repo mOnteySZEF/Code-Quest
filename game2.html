@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/game2.css" />
+    <title>Code Quest</title>
+</head>
+<body>
+    <div class="container">
+        <div id="game" class="justify-center flex-column">
+            <div id="hud">
+                <div id="hud-item">
+                    <p id="progressText" class="hud-prefix">Zadanie</p>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div id="hud-item">
+                    <p class="hud-prefix">Punkty</p>
+                    <h1 class="hud-main-text" id="score">0</h1>
+                </div>
+            </div>
+            <h2 style="text-align: center;" id="question">Popraw kod</h2>
+            <div class="editor-wrapper">
+                <div class="line-numbers" id="lineNumbers"></div>
+                <div contenteditable="true" class="code-editor" id="codeEditor"></div>
+            </div>              
+            <div class="devtools">
+                <div class="devtools-header">DevTools - Konsola</div>
+                <pre id="devConsole"></pre>
+              </div>              
+            <div class="button-container">
+                <button id="checkCodeBtn" class="btn" onclick="runCode()">Sprawdź Kod</button>
+                <button id="hintBtn" class="btn">Pokaż Podpowiedź</button>
+                <button class="btn" onclick="window.location.href='index.html';">Cofnij do Menu</button>
+            </div>
+            <div id="hint" class="hidden">
+                <h3>Podpowiedź:</h3>
+                <p id="hintText"></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/game2.js"></script>
+</body>
+</html>
